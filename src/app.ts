@@ -77,7 +77,7 @@ export default async function startServe(randomPort: Boolean = false) {
     res.status(err.status || 500).send(err);
   });
 
-  const port = randomPort ? 0 : parseInt(process.env.PORT || "60000");
+  const port = randomPort ? 0 : parseInt(process.env.PORT || "46000");
   return await new Promise((resolve, reject) => {
     server = app.listen(port, async (v) => {
       const address = server?.address();
